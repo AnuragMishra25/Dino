@@ -62,13 +62,18 @@ public class Player extends GameObject{
 
         if(dy>14)dy = 14;
         if(dy<-14)dy = -14;
+        System.out.println("y before is: "+y);
         if(y > 400){
             y= 400;
-        }else{
+        }else if (up){
             y += dy;
+        }else{
+          if(y + dy <401) {
+            y += dy;
+          }
         }
         //this is what changes the y, when touched
-        System.out.println("y is: "+y);
+        System.out.println("y after is: "+y);
     }
 
     public void draw(Canvas canvas)
