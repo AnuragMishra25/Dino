@@ -98,7 +98,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback
         botborder = new ArrayList<BotBorder>();
         smokeStartTime=  System.nanoTime();
         missileStartTime = System.nanoTime();
-
+        bg.setVector(-5);
         thread = new MainThread(getHolder(), this);
         //we can safely start the game loop
         thread.setRunning(true);//set boolean runnnig flag to true
